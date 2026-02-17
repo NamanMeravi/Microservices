@@ -26,7 +26,9 @@ redisClient.connect().then(()=>{
   
 })
 
-app.use("api/v1",userRoute);
+app.use(express.json());
+
+app.use("/api/v1",userRoute);
 
 
 const port = process.env.PORT || 3333;
